@@ -12,7 +12,6 @@ import openai
 
 
 
-openai.api_key = "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"
 
 
 
