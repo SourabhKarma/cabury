@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS wepage</title>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link type="text/css" rel="stylesheet" href="templates/css/custom.css">
+</head>
+<body class="bg_darkblue">
+
+
+    <div class="splash_block">
+        <div class="splash_inner" data-aos="fade-up">
+            <img src="/templates/img/wallpaper-splash.png"/>
+        </div>
+    </div>
+    
+
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="templates/js/custom.js"></script>
+
+    <script type="text/javascript">
+        // START FOR SPLASH SCREEN LOADING
+		$(function(){
+			$('.bg_darkblue .splash_block').hide();
+			  $('.bg_darkblue').click(function(){
+	             $(this).fadeOut(1000,function() { 
+                    window.location.href = "{% url 'frame1' %}"
+                    
+                
+                
+                });
+            });
+			$('.bg_darkblue .splash_block').fadeIn(1000, function() {
+	           window.setTimeout (function() {
+	             $('.bg_darkblue').fadeOut(500, function() { 
+                   
+                    window.location.href = "{% url 'frame1' %}"
+                
+                }) }
+	             , 1000);
+		    });
+		});
+	</script>
+</body>
+</html>

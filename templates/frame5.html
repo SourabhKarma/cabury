@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS wepage</title>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.css">
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link type="text/css" rel="stylesheet" href="templates/css/custom.css">
+</head>
+
+
+<body class="" onload="formatText()" >
+
+
+    <header>
+        <div class="inner_header">
+            <a href="javascript:void(0)">
+                <img src="templates/img/logo.png" class="img_logo"/>
+            </a>
+            <div class="topnav">
+                <button type="button" class="btn_menuhamburger" id="btn_menuhamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="overlay"></div>
+                <div class="right_sidebar" id="right_sidebar">
+                    <a class="btn_close" id="btn_close">&times;</a>
+                    <ul class="list_unstyled">
+                        <li>
+                            <a href="javascript:void(0)">How to participate</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Terms &amp; Conditions</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Contact Us </a>
+                        </li>
+                    </ul>
+                    <div class="foot">
+                        <img src="https://icon-library.com/images/photo-placeholder-icon/photo-placeholder-icon-14.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main_content">
+        <ul class="list_step">
+            <li>
+                <span class="bullet bullet_complete"></span>
+            </li>
+            <li>
+                <span class="bullet bullet_complete"></span>
+            </li>
+            <li>
+                <span class="bullet bullet_complete"></span>
+            </li>
+            <li>
+                <span class="bullet bullet_complete"></span>
+            </li>
+            <li>
+                <span class="bullet bullet_current"></span>
+            </li>
+            <li>
+                <span class="bullet"></span>
+            </li>
+        </ul>
+        <div class="song_block">
+            <h5>Your song's lyrics are ready!</h5>
+        <form method="post" action="{% url 'frame6' %}" >
+            <div class="scroll_content">
+                <div class="mCustomScrollbar">
+                    <p class="desc">{{ result|linebreaksbr|safe }}</p>
+                    {% comment %} <p class="desc">Sunt dolore aliqua deserunt incididunt sint aliqua ipsum ex. Culpa sit elit fugiat esse et id qui do occaecat exercitation nulla dolor aute ex. Occaecat nulla veniam proident aliqua.</p>
+                    <p class="desc">Sunt dolore aliqua deserunt incididunt sint aliqua ipsum ex. Culpa sit elit fugiat esse et id qui do occaecat exercitation nulla dolor aute ex. Occaecat nulla veniam proident aliqua.</p>
+                    <p class="desc">Sunt dolore aliqua deserunt incididunt sint aliqua ipsum ex. Culpa sit elit fugiat esse et id qui do occaecat exercitation nulla dolor aute ex. Occaecat nulla veniam proident aliqua.</p>
+                    <p class="desc">Sunt dolore aliqua deserunt incididunt sint aliqua ipsum ex. Culpa sit elit fugiat esse et id qui do occaecat exercitation nulla dolor aute ex. Occaecat nulla veniam proident aliqua.</p>
+                    <p class="desc">Sunt dolore aliqua deserunt incididunt sint aliqua ipsum ex. Culpa sit elit fugiat esse et id qui do occaecat exercitation nulla dolor aute ex. Occaecat nulla veniam proident aliqua.</p> {% endcomment %}
+                </div>
+            </div>
+            <div class="btn_block">
+                <button class="btn btn_primary">Recreate Lyrics</button>
+                <button type="submit" class="btn btn_secondary" >Create Song</button>
+            </div>
+        </form>
+        </div>
+    </div>
+
+   
+    
+
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="templates/js/custom.js"></script>
+</body>
+</html>
